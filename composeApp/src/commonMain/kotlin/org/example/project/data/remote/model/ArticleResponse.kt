@@ -1,10 +1,11 @@
-package org.example.project.model
+package org.example.project.data.remote.model
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import org.example.project.domain.model.Article
 
 @Serializable
-data class Article(
+data class ArticleResponse(
     val id: Long,
     @SerialName("category_id")
     val categoryId: Long,
@@ -25,7 +26,7 @@ data class Article(
     val updatedAt: String
 )
 
-public val mockArticle = Article(
+val mockArticle = Article(
     id = 1,
     categoryId = 1,
     title = "Rekomendasi Anime Bocchi",

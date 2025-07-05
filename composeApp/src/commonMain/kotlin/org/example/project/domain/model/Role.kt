@@ -1,13 +1,12 @@
-package org.example.project.model
+package org.example.project.domain.model
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class Category(
+data class Role(
     val id: Long,
     val name: String,
-    val description: String,
     @SerialName("created_by")
     val createdBy: Long,
     @SerialName("created_at")
